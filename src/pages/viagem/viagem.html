@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        <div  class="toolbar-title-toolbar-title-md" ng-reflect-klass="toolbar-title" ng-reflect-ng-class="toolbar-title-md">{{viagem.titulo}}</div>
+        
+    </ion-title>
+    <img src="assets/imgs/lixo.png" style="align-self: flex-end;" (click) = "apagarViagem()">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <div padding class="slide">
+  <div padding>
+    
+    <!--<button ion-button block (click) = "apagarViagem()">Apagar viagem</button>-->
+  </div>
+
+  <ion-label><b>Título:</b></ion-label>
+  <ion-label>{{viagem.titulo}}</ion-label>
+  <ion-label><b>Data:</b></ion-label>
+  <ion-label>{{viagem.data}}</ion-label>
+  <ion-label><b>Cidade:</b></ion-label>
+  <ion-label>{{viagem.cidade}}</ion-label>
+  <ion-label><b>Data de partida:</b></ion-label>
+  <ion-label>{{viagem.partidaData}}</ion-label>
+  <ion-label><b>Hora de partida:</b></ion-label>
+  <ion-label>{{viagem.partidaHora}}</ion-label>
+  <ion-label><b>Data de retorno:</b></ion-label>
+  <ion-label>{{viagem.retornoData}}</ion-label>
+  <ion-label><b>Hora de retorno:</b></ion-label>
+  <ion-label>{{viagem.retornoHora}}</ion-label>
+  <ion-label><b>Observações:</b></ion-label>
+  <ion-label>{{viagem.observacoes}}</ion-label>
+
+  <div padding>
+    <button ion-button block (click)="goCadastroAnotacaoPage()">Criar anotação</button>
+  </div>
+
+  <div padding *ngFor = "let anotacao of anotacoes; let i = index">
+      <button ion-button block (click)="goAnotacaoPage(i)" >Anotacao {{ i + 1}}</button>
+  </div>
+    </div>
+  
+
+</ion-content>

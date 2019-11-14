@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="padding-left: 70px;">
+      <div class="toolbar-title-toolbar-title-md" ng-reflect-klass="toolbar-title"
+        ng-reflect-ng-class="toolbar-title-md">Início</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides>
+    <div padding class="slide">
+      <img class="new" src="assets/imgs/new.png" (click)="goCadastroViagemPage()">
+      <div padding *ngFor="let viagem of viagens; let i = index">
+        <button ion-button (click)="goViagemPage(viagem)">
+          <img style="width:65%; position:absolute; top:18px;" src="assets/imgs/viagens.png">
+          <label style="position:absolute; top:90px;">{{viagem.titulo}}</label>
+        </button>
+
+
+
+        
+      </div>
+    </div>
+
+
+  </ion-slides>
+</ion-content>
